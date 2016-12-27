@@ -1,28 +1,37 @@
 html, body, #app {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 .container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
   align-items: stretch;
-  background-color: #ccc;
+  background-image: url("./logo.png");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
 }
 .row {
-  flex: 1;
-  display: flex;
   align-items: stretch;
+  display: flex;
+  flex: 1;
 }
 .cell {
+  background-color: #878ed7;
+  background-image: url("./logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   flex: 1;
-  border: 1px solid black;
-  background-color: #fff;
+  opacity: 1;
+  outline: 1px solid #4f5179;
+  transform: translateY(0);
+  transition: all .2s;
 }
 .cell.reveal {
-  background-color: transparent;
+  opacity: 0;
+  outline: none;
+  transform: translateY(100%);
 }

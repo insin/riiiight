@@ -9,10 +9,8 @@ class Square extends Component {
       hidden: false,
     })
   }
-  render({}, {hidden}) {
-    return <div class={{cell: true, reveal: !hidden}} onClick={this.handleClick}>
-      &nbsp;
-    </div>
+  render({index}, {hidden}) {
+    return <div class={{cell: true, reveal: !hidden}} onClick={this.handleClick}/>
   }
 }
 
